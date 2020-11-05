@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace MicroRabbit.Domain.Core.Bus
 {
-    interface IEventBus
+    public interface IEventBus
     {
-        Task SendCommand<T>(T Command) where T : Command;
+        Task SendCommand<T>(T command) where T : Command;
+
         void Publish<T>(T @event) where T : Event;
 
         void Subscribe<T, TH>()
