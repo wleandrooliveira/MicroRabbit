@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace MicroRabbit.Transfer.Domain.Models
+namespace MicroRabbit.MVC.Models.DTO
 {
-    public class TransferLog
+    public class TransferDTO
     {
-        public int Id { get; set; }
         public int FromAccount { get; set; }
         public int ToAccount { get; set; }
         [Column(TypeName = "decimal(18,2)")]
